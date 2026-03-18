@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АРТЕТ-Сибирь — материалы для интерьера</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        color: #333;
+        scroll-behavior: smooth;
+    }
+
+    header {
+        background-color: #f8f8f8;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    header p {
+        margin-top: 10px;
+        color: #555;
+        font-size: 1.2em;
+    }
+
+    section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    h2.section-title {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2em;
+        color: #444;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        background-color: #fff;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+        color: #222;
+    }
+
+    .card p {
+        color: #555;
+    }
+
+    .card ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    .card button {
+        margin-top: 15px;
+        background-color: #007acc;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .card button:hover {
+        background-color: #005f99;
+        transform: scale(1.05);
+    }
+
+    .contact {
+        background-color: #f8f8f8;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .contact a {
+        color: #007acc;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Модальные окна */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0);
+        opacity: 0;
+        transition: background-color 0.3s, opacity 0.3s;
+    }
+
+    .modal.show {
+        display: block;
+        opacity: 1;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 30px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        transform: translateY(-50px);
+        transition: transform 0.3s;
+    }
+
+    .modal.show .modal-content {
+        transform: translateY(0);
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>ООО «АРТЕТ-Сибирь»</h1>
+    <p>Подбор и поставка материалов для архитектурных и интерьерных проектов</p>
+</header>
+
+<section>
+    <h2 class="section-title">Наши материалы</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Панели VALCHROMAT</h3>
+            <p>Окрашенная древесноволокнистая плита из Португалии. Цвет проходит через весь материал.</p>
+            <button data-modal="modal1">Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h3>Панели VIROC</h3>
+            <p>Фибро-цементная плита с древесной щепой и цементом. Самодостаточна и не требует декоративных покрытий.</p>
+            <button data-modal="modal2">Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h3>VPL панели</h3>
+            <p>Композитные 3D-панели из МДФ российского производства. Высокая прочность и разнообразные декоративные решения.</p>
+            <button data-modal="modal3">Подробнее</button>
+        </div>
+    </div>
+</section>
+
+<!-- Модальные окна -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Панели VALCHROMAT</h3>
+        <p>Окрашенная древесноволокнистая плита из Португалии. Цвет проходит через весь материал, а не только по поверхности. Отсутствие декоративных покрытий, равномерная структура и стабильные физические свойства делают материал удобным для фрезеровки, обработки и повторного использования.</p>
+        <p>Применяется в:</p>
+        <ul>
+            <li>Мебели и столярных изделиях</li>
+            <li>Стеновых и декоративных панелях</li>
+            <li>Общественных пространствах</li>
+            <li>Дизайнерских объектах</li>
+            <li>Детских образовательных и игровых средах</li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Панели VIROC</h3>
+        <p>Фибро-цементная плита, произведённая в Португалии. Состав: древесная щепа и цемент. Материал самодостаточен и не требует декоративных покрытий.</p>
+        <p>Применение:</p>
+        <ul>
+            <li>Фасады</li>
+            <li>Интерьеры в индустриальном, лофт, хайтек стилях</li>
+            <li>Общественные пространства</li>
+            <li>Зоны с повышенной нагрузкой</li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>VPL панели</h3>
+        <p>Композитные профильные 3D-панели нового поколения из МДФ российского производства. Высокая прочность, износостойкость и разнообразные декоративные решения. Возможна интеграция с освещением и инженерными элементами.</p>
+    </div>
+</div>
+
+<section class="contact">
+    <h2>Контакты</h2>
+    <p>Готовы обсудить подбор материалов и проработку решений под задачи вашего проекта. Свяжитесь с нами: <a href="mailto:info@artet-sibir.ru">info@artet-sibir.ru</a></p>
+</section>
+
+<script>
+    const buttons = document.querySelectorAll('.card button');
+    const modals = document.querySelectorAll('.modal');
+    const closes = document.querySelectorAll('.close');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = document.getElementById(btn.dataset.modal);
+            modal.classList.add('show');
+        });
+    });
+
+    closes.forEach(span => {
+        span.addEventListener('click', () => {
+            span.parentElement.parentElement.classList.remove('show');
+        });
+    });
+
+    window.addEventListener('click', e => {
+        modals.forEach(modal => {
+            if(e.target === modal) modal.classList.remove('show');
+        });
+    });
+</script>
+
+</body>
+</html>
